@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت پروژه های صندوق بازنشستگی بانک ها</title>
+
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/css/circle.css">
+    <link rel="stylesheet" href="/css/app.css">
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="/js/alpine.min.js" defer></script>
+
+    
+</head>
+<body>
+    
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary rtl ">
+        <a class="navbar-brand" href="#">
+            مدیریت پروژه های صندوق بازنشستگی بانک ها
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            
+            <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/#">صفحه اصلی</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/#">گزارش ها</a>
+                </li>
+
+
+                <!-- {{#if user.username}} -->
+                    <!-- {{!-- logged in  --}} -->
+                    <li class="nav-item d-none">
+                        <a class="nav-link" href="/logout">خروج 
+                            <!-- ({{user.fullname}})  -->
+                        </a>
+                    </li>
+                <!-- {{else}} -->
+                    <!-- {{!-- not logged in  --}} -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#">ورود کاربر</a>
+                    </li>                    
+                <!-- {{/if}} -->
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0 d-none">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid rtl text-right">
+
+        <div class="row mt-3">
+            <div class="col text-center">
+                <h4>عنوان پروژه : ....... </h4>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-3 text-center">
+                <div class="card border-success">
+                    <div class="card-header text-center bg-success text-white">
+                        آماده سازی 
+
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col text-right hover">
+                                ایده
+
+                                <div class="c100 p100 small green float-left">
+                                    <span>100%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+
+                            </div>
+                        </div>
+                        
+
+                        <div class="row">
+                            <div class="col text-right hover">
+                                PFS
+
+                                <div class="c100 p50 small  float-left">
+                                    <span>50%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col text-right hover">
+                                FS
+                                <div class="c100 p40 small  float-left">
+                                    <span>40%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col text-right hover">
+                                تایید هیات مدیره مجری 
+
+                                <div class="c100 p20 small orange float-left">
+                                    <span>20%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <span class="small ">
+                    برای مشاهده جزئیات روی گزینه های بالا کلیک کنید
+                </span>
+
+            </div>
+            <div class="col-md-3">
+                <div class="card border-primary">
+                    <div class="card-header text-center bg-primary text-white">
+                        تشکیل شخصیت حقوقی
+
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col text-right hover">
+                                تشکیل کنسرسیوم
+                                <div class="c100 p80 small green float-left">
+                                    <span>40%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col text-right hover">
+                                تنظیم شراکت نامه
+                                <div class="c100 p1 small orange float-left">
+                                    <span>1%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col text-right hover">
+                                تاسیس شرکت 
+                                <div class="c100 p40 small orange float-left">
+                                    <span>40%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <span class="small">
+                    برای مشاهده جزئیات روی گزینه های بالا کلیک کنید
+                </span>
+
+            </div>
+            <div class="col-md-3">
+                <div class="card border-warning">
+                    <div class="card-header text-center bg-warning text-white">
+                        مجوزات وزیر
+
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col text-right hover">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                                    خوراک
+                                </span>
+                                <div class="c100 p100 small green float-left">
+                                    <span>100%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-right hover">
+                                انرژی 
+                                <div class="c100 p40 small  float-left">
+                                    <span>40%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-right hover">
+                                آب
+                                <div class="c100 p40 small  float-left">
+                                    <span>40%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-right hover">
+                                منابع طبیعی
+                                <div class="c100 p10 small orange float-left">
+                                    <span>10%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-right hover">
+                                محیط زیست
+                                <div class="c100 p100 small green float-left">
+                                    <span>100%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-right hover">
+                                صمت
+                                <div class="c100 p100 small green float-left">
+                                    <span>100%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card border-info">
+                    <div class="card-header text-center badge-info">
+                        اجرا
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col text-right hover">
+                                مناقصه مشاور
+                                <div class="c100 p40 small  float-left">
+                                    <span>40%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col text-right hover">
+                                مناقصه پیمانکاران
+                                <div class="c100 p40 small  float-left">
+                                    <span>40%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-right hover">
+                                تامین مالی
+                                <div class="c100 p40 small  float-left">
+                                    <span>40%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <span class="small">
+                    برای مشاهده اسکن مستندات روی گزینه های بالا کلیک کنید
+                </span>
+            </div>
+        </div>
+        
+
+
+    </div>
+
+    <footer>
+        <div class="container text-left small" style="direction: rtl;">
+            <hr>
+            اداره فن آوری اطلاعات (آبان ماه 1400) - 
+            <a href="/changelog.txt" target="_blank">
+                VER 1.0.0
+            </a>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

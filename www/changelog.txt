@@ -1,0 +1,42 @@
+ver 1.0.5
+    [X] add bank mellat scripts to calculation 
+    [X] add bank mellat report builder pages  
+
+ver 1.0.4 
+    [X] fix numeric format in exported excel cells (cells are formated as text but need to convert to numeric cells)
+
+
+ver 1.0.3
+    [X] add a loading indicator to generate report pag
+    [X] make doreh , version validation in generate report page 
+    [X] filter generated file result by bank name 
+    [X] add a search box on top of the page to filter the file list  result
+    [X] move generate button on top of the page , and fix the right panel to show each bank prepared to process 
+
+    
+ver 1.0.2 
+    [X] add a new fiter-field to sql script => version : 
+        each bank may have some difrent data sent in difrent dates fo a doreh 
+        so when calc the result , the data must filtered out by : doreh , version 
+        each band must have at least one version 
+        ex : where doreh = 140005 and version = 2 
+    [X] the sql-sp to calc report must have 3 parameters :
+        doreh , version , sheet 
+        in addition , in script we spkit doreh into tow part to eanble the dynamic result calculation 
+        @YEAR , @MONTH 
+
+
+ver 1.0.1 
+    [X] sheet 6 of sample excel file is compeleted 
+    [X] some diffs , fixes 
+
+
+ver 1.0.0
+    [X] initial app design 
+    [X] app route planning 
+    [X] database planning 
+    [X] login policy planing (now only have a hard code use/pass)
+    [ ] connect the login process to a database 
+    [ ] create some roles to manage user access if needed later 
+
+
