@@ -2,6 +2,11 @@ console.log('app.js');
 
 var start_shamsi = '1400/08/23' ;
 
+
+
+
+
+
 const today = ()=>{
     _date = new Date();
     return moment(_date).format('YYYY/MM/DD')
@@ -38,7 +43,9 @@ const calc = (days)=>{
     var end_shamsi = addDays(start_shamsi , days);
     var end_miladi = miladi(end_shamsi);
     var diff = dayDiff(today(),end_miladi);
-    
+    remain = (diff > 100 ) ? 100 : diff ; 
+    remain = (diff < 0 )   ? 0 : diff ; 
+    percent = parseInt(100 / (days / remain));
     // console.log('start_shamsi' , start_shamsi)
     // console.log('start_miladi' , start_miladi)
     // console.log('end_shamsi' , end_shamsi)
@@ -52,8 +59,10 @@ const calc = (days)=>{
         'end_shamsi' : end_shamsi,
         'start_miladi' : start_miladi,
         'end_miladi' : end_miladi,
-        'remain' : diff , 
-        'days' : days
+        'remain' : remain , 
+        'days' : days , 
+        'percent' : percent , 
+        'sclass' : `c100 p${percent} small green float-left`
     };
 }; 
 
@@ -63,6 +72,59 @@ console.log(calc(90))
 
 // console.log(_start , _end , diff)
 
+const amadehSazi = {
+    title : 'آماده سازی'  , 
+    data : [
+        { title : 'ایده کسب و کار' , days : 20 } , 
+        { title : 'PFS' , days : 30 } , 
+        { title : 'FS' , days : 45 } , 
+        { title : 'تایید هیات مدیره مجری' , days : 45 } , 
+    ] , 
+    calc : calc , 
+    cardClass : 'card border-success' , 
+    cardHeaderClass : 'card-header text-center bg-success text-white'
+
+}
+
+const hoghooghi = {
+    title : 'تشکیل شخصیت حقوقی'  , 
+    data : [
+        { title : 'تشکیل کنسرسیوم' , days : 60 } , 
+        { title : 'تنظیم شراکت نامه' , days : 60 } , 
+        { title : 'تاسیس شرکت' , days : 90 } , 
+    ] , 
+    calc : calc , 
+    cardClass : 'card border-primary' , 
+    cardHeaderClass : 'card-header text-center bg-primary text-white'
+
+}
 
 
+const mojavezat = {
+    title : 'مجوزات و زیرساخت ها    '  , 
+    data : [
+        { title : 'خوراک' , days : 150 } , 
+        { title : 'انرژی' , days : 150 } , 
+        { title : 'آب' , days : 150 } , 
+        { title : 'منابع طبیعی' , days : 150 } , 
+        { title : 'محیط زیست' , days : 150 } , 
+        { title : 'وزارت صمت' , days : 150 } , 
+    ] , 
+    calc : calc , 
+    cardClass : 'card border-warning' , 
+    cardHeaderClass : 'card-header text-center bg-warning text-white'
 
+}
+
+const ejra = {
+    title : 'اجرا'  , 
+    data : [
+        { title : 'مناقصه مشاور' , days : 180 } , 
+        { title : 'مناقصه پیمانکاران' , days : 180 } , 
+        { title : 'تامین مالی' , days : 365 } , 
+    ] , 
+    calc : calc , 
+    cardClass : 'card border-info' , 
+    cardHeaderClass : 'card-header text-center bg-info text-white'
+
+}
