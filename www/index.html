@@ -18,6 +18,12 @@
 
     <script src="/js/alpine.min.js" defer></script>
 
+    <script src="/js/jalali-moment.browser.js"></script>
+    
+    <script src="/js/app.js"></script>
+
+    
+
     
 </head>
 <body>
@@ -72,9 +78,10 @@
 
     <div class="container-fluid rtl text-right">
 
-        <div class="row mt-3">
+        <div class="row mt-3" x-data="calc(0)">
             <div class="col text-center">
                 <h4>عنوان پروژه : ...... </h4>
+                <span>ناریخ شروع پروژه : <span x-text="start_shamsi"></span></span>
             </div>
         </div>
 
@@ -117,10 +124,10 @@
                     </div>
                     <div class="card-body">
 
-                        <div class="row">
+                        <div class="row item" x-data="calc(20)">
                             <div class="col text-right hover">
                                 ایده کسب و کار 
-                                <span class="badge badge-info">20 روز</span>
+
                                 <div class="c100 p100 small green float-left">
                                     <span>100%</span>
                                     <div class="slice">
@@ -128,15 +135,17 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
 
                             </div>
                         </div>
                         
 
-                        <div class="row">
+                        <div class="row item" x-data="calc(30)">
                             <div class="col text-right hover">
                                 PFS 
-                                <span class="badge badge-info">30 روز</span>
 
                                 <div class="c100 p50 small  float-left">
                                     <span>50%</span>
@@ -145,15 +154,17 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
 
                             </div>
                         </div>
 
 
-                        <div class="row">
+                        <div class="row item" x-data="calc(45)">
                             <div class="col text-right hover">
                                 FS
-                                <span class="badge badge-info">45 روز</span>
 
                                 <div class="c100 p40 small  float-left">
                                     <span>40%</span>
@@ -162,13 +173,17 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
+
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row item" x-data="calc(45)">
                             <div class="col text-right hover ">
                                 تایید هیات مدیره مجری 
-                                <span class="badge badge-info">45 روز</span>
 
                                 <div class="c100 p20 small orange float-left">
                                     <span>20%</span>
@@ -177,6 +192,9 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
 
                             </div>
                         </div>
@@ -192,15 +210,13 @@
                 <div class="card border-primary">
                     <div class="card-header text-center bg-primary text-white">
                         تشکیل شخصیت حقوقی
-
                     </div>
                     <div class="card-body">
 
-                        <div class="row">
+                        <div class="row item" x-data="calc(60)">
                             <div class="col text-right hover">
 
                                 تشکیل کنسرسیوم
-                                <span class="badge badge-info">60 روز</span>
 
                                 <div class="c100 p80 small green float-left">
                                     <span>40%</span>
@@ -209,13 +225,16 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
+
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row item" x-data="calc(60)" >
                             <div class="col text-right hover">
                                 تنظیم شراکت نامه
-                                <span class="badge badge-info">60 روز</span>
 
                                 <div class="c100 p1 small orange float-left">
                                     <span>1%</span>
@@ -224,13 +243,17 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
+
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row item" x-data="calc(90)">
                             <div class="col text-right hover">
                                 تاسیس شرکت 
-                                <span class="badge badge-info">90 روز</span>
 
                                 <div class="c100 p40 small orange float-left">
                                     <span>40%</span>
@@ -239,6 +262,9 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
                             </div>
                         </div>
 
@@ -250,18 +276,18 @@
                 </span>
 
             </div>
-            <div class="col-md">
+            <div class="col-md ">
                 <div class="card border-warning">
                     <div class="card-header text-center bg-warning text-white">
                         مجوزات و زیرساخت ها
 
                     </div>
                     <div class="card-body">
-                        <div class="row">
+                        
+                        <div class="row item" x-data="calc(150)">
                             <div class="col text-right hover">
                                 <span data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
                                     خوراک
-                                <span class="badge badge-info">150 روز</span>
 
                                 </span>
                                 <div class="c100 p100 small green float-left">
@@ -271,12 +297,14 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row item" x-data="calc(150)">
                             <div class="col text-right hover">
                                 انرژی 
-                                <span class="badge badge-info">150 روز</span>
 
                                 <div class="c100 p40 small  float-left">
                                     <span>40%</span>
@@ -285,12 +313,14 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row item" x-data="calc(150)">
                             <div class="col text-right hover">
                                 آب
-                                <span class="badge badge-info">150 روز</span>
                                 <div class="c100 p40 small  float-left">
                                     <span>40%</span>
                                     <div class="slice">
@@ -298,12 +328,14 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row item" x-data="calc(150)">
                             <div class="col text-right hover">
                                 منابع طبیعی
-                                <span class="badge badge-info">150 روز</span>
                                 <div class="c100 p10 small orange float-left">
                                     <span>10%</span>
                                     <div class="slice">
@@ -311,12 +343,14 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row item" x-data="calc(150)">
                             <div class="col text-right hover">
                                 محیط زیست
-                                <span class="badge badge-info">150 روز</span>
                                 <div class="c100 p100 small green float-left">
                                     <span>100%</span>
                                     <div class="slice">
@@ -324,12 +358,14 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row item" x-data="calc(150)">
                             <div class="col text-right hover">
                                 وزارت صمت
-                                <span class="badge badge-info">150 روز</span>
 
                                 <div class="c100 p100 small green float-left">
                                     <span>100%</span>
@@ -338,6 +374,9 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
                             </div>
                         </div>
                     </div>
@@ -345,17 +384,16 @@
                 <hr>
             </div>
 
-            <div class="col-md">
+            <div class="col-md ">
                 <div class="card border-info">
                     <div class="card-header text-center badge-info">
                         اجرا
                     </div>
                     <div class="card-body">
 
-                        <div class="row">
+                        <div class="row item" x-data="calc(180)">
                             <div class="col text-right hover">
                                 مناقصه مشاور
-                                <span class="badge badge-info">180 روز</span>
                                 <div class="c100 p40 small  float-left">
                                     <span>40%</span>
                                     <div class="slice">
@@ -363,13 +401,15 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row item" x-data="calc(180)">
                             <div class="col text-right hover">
                                 مناقصه پیمانکاران
-                                <span class="badge badge-info">180 روز</span>
 
                                 <div class="c100 p40 small  float-left">
                                     <span>40%</span>
@@ -378,12 +418,14 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row item" x-data="calc(365)">
                             <div class="col text-right hover">
                                 تامین مالی
-                                <span class="badge badge-info">365 روز</span>
 
                                 <div class="c100 p40 small  float-left">
                                     <span>40%</span>
@@ -392,6 +434,9 @@
                                         <div class="fill"></div>
                                     </div>
                                 </div> 
+                                <br><span class="badge badge-info"><span x-text="days"></span> روز</span>
+                                <span class="badge badge-warning">مانده : <span x-text="remain"></span> روز</span><br>
+                                <span class="badge badge-secondary">تاریخ پایان : <span x-text="end_shamsi"></span></span><br>
                             </div>
                         </div>
                     </div>
