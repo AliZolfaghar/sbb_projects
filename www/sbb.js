@@ -1,2 +1,2 @@
-console.log('sbb')
+console.log('azr')
 console.log('mr fayaz')
